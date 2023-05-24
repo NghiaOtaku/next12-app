@@ -5,7 +5,7 @@ import Link from "next/link";
 import Head from "next/head";
 
 const Posts = ({ posts }, props) => {
-  console.log("posts", posts);
+  // console.log("posts", posts);
   //   console.log("props", props);
 
   return (

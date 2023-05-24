@@ -22,6 +22,19 @@ const Random = ({ joke }) => {
 
 export const getServerSideProps = async () => {
   const joke = await getRandomJoke();
+  // joke = false;
+
+  if (!joke)
+    return {
+      notFound: true,
+    };
+
+  // return {
+  //   redirect: {
+  //     destination: "/posts",
+  //     permanent: false,
+  //   },
+  // };
 
   return {
     props: {
